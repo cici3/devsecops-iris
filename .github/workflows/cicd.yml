@@ -6,7 +6,7 @@ on: push
 jobs:
   # first job to test the application using pytest
   unittest:
-    runs-on: ['ubuntu-latest','windows-latest'] # choose the OS for running the action
+    runs-on: ubuntu-latest # choose the OS for running the action
     # define the individual sequential steps to be run
     steps:
       - name: Checkout the repository
@@ -50,7 +50,7 @@ jobs:
           fail_ci_if_error: true
 
   container-security:
-    runs-on: ['ubuntu-latest','windows-latest']
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
